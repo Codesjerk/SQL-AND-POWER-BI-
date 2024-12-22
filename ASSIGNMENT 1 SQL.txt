@@ -1,0 +1,32 @@
+ASSIGNMENT 1 SQL
+
+1.	select count(*) from emp; 
+2.	select count(*) from dept;
+3.	select * from emp;
+4.	select * from dept;
+5.	select sum(sal) from emp;   
+6.	select sum(comm) from emp;
+7.	select distinct job from emp where comm is not null;
+8.	select sysdate from dual;
+9.	select avg(sal) from emp;
+10.	select deptno, count(*) from emp group by deptno;
+11.	select deptno, sum(sal) from emp group by deptno;
+12.	select * from emp order by deptno;
+13.	select job, count(*) from emp group by job;
+14.	select job, avg(sal) from emp group by job;
+15.	select * from emp order by job;
+16.	select * from emp order by sal desc;
+17.	select * from emp order by deptno desc, sal desc;
+18.	select empno, ename, to_char(hiredate,'DD-MON-YYYY') as hiredate from emp;
+19.	select * from emp order by hiredate;
+20.	select * from emp where hiredate = (select max(hiredate) from emp);
+21.	select * from emp where hiredate = (select min(hiredate) from emp);
+22.	select * from emp order by to_char(hiredate,'YYYY') desc, deptno;
+23.	select * from emp where sal >= (select avg(sal) from emp);
+24.	select * from emp where sal <= (select avg(sal) from emp);
+25.	select * from emp where sal between 2000 and 4000;
+26.	select * from emp where sal = (select max(sal) from emp) union all select * from emp where sal = (select min(sal) from emp);
+27.	select count(*) from emp where length(ename) = 6;
+28.	select max(sal), min(sal) from emp;
+29.	select deptno, max(sal), min(sal), avg(sal), sum(sal) from emp group by deptno;
+30.	select count(*) from emp where to_char(hiredate,'MM') = to_char(sysdate,'MM');
